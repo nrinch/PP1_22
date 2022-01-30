@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/am_title"
+        style="@style/TitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_marginEnd="@dimen/dp16"
+        android:padding="@dimen/dp8"
+        android:text="@string/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/am_button"
+        app:layout_constraintStart_toEndOf="@id/am_sub_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/am_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/am_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/am_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subtitle"
+        android:textColor="@color/sub_title_color"
+        android:textSize="@dimen/sp24"
+        app:layout_constraintBottom_toBottomOf="@id/am_title"
+        app:layout_constraintEnd_toStartOf="@id/am_title"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/am_title" />
+    <View
+        app:layout_constraintBottom_toTopOf="@id/am_button"
+        app:layout_constraintStart_toStartOf="@id/am_button"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@android:color/holo_green_dark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@android:color/holo_orange_dark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

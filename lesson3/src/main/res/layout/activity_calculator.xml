@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <TextView
+        android:id="@+id/ac_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sub_title_font_size"
+        app:layout_constraintBottom_toTopOf="@id/ac_operation_input"/>
+
+    <TextView
+        android:id="@+id/ac_operation_input"
+        android:layout_width="match_parent"
+        android:text="Here"
+        android:textColor="@color/black"
+        android:layout_height="96dp"
+        android:textSize="@dimen/title_font_size"
+
+        app:layout_constraintBottom_toBottomOf="@id/input_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/input_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="240dp" />
+
+
+    <Button
+        android:id="@+id/ca_clean"
+        style="@style/CleanButton"
+        android:text="@string/clean"
+        app:layout_constraintBottom_toTopOf="@id/ca_seven"
+        app:layout_constraintEnd_toStartOf="@id/ca_percents"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_guideline"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/ca_percents"
+        style="@style/OperationButton"
+        android:text="%"
+        app:layout_constraintBottom_toBottomOf="@id/ca_clean"
+        app:layout_constraintEnd_toStartOf="@id/ca_change"
+        app:layout_constraintStart_toEndOf="@id/ca_clean"
+        app:layout_constraintTop_toTopOf="@id/ca_clean" />
+
+    <Button
+        android:id="@+id/ca_change"
+        style="@style/OperationButton"
+        android:text="+/-"
+        app:layout_constraintBottom_toBottomOf="@id/ca_clean"
+        app:layout_constraintEnd_toStartOf="@id/ca_div"
+        app:layout_constraintStart_toEndOf="@id/ca_percents"
+        app:layout_constraintTop_toTopOf="@id/ca_clean" />
+
+    <Button
+        android:id="@+id/ca_div"
+        style="@style/OperationButton"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="@id/ca_clean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ca_point"
+        app:layout_constraintTop_toTopOf="@id/ca_clean" />
+
+
+    <Button
+        android:id="@+id/ca_seven"
+        style="@style/CalculatorButton"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@id/ca_four"
+        app:layout_constraintEnd_toStartOf="@id/ca_eight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ca_clean" />
+
+    <Button
+        android:id="@+id/ca_eight"
+        style="@style/CalculatorButton"
+        android:text="8"
+        app:layout_constraintBottom_toBottomOf="@id/ca_seven"
+        app:layout_constraintEnd_toStartOf="@id/ca_nine"
+        app:layout_constraintStart_toEndOf="@id/ca_seven"
+        app:layout_constraintTop_toTopOf="@id/ca_seven" />
+
+    <Button
+        android:id="@+id/ca_nine"
+        style="@style/CalculatorButton"
+        android:text="9"
+        app:layout_constraintBottom_toBottomOf="@id/ca_seven"
+        app:layout_constraintEnd_toStartOf="@id/ca_mult"
+        app:layout_constraintStart_toEndOf="@id/ca_eight"
+        app:layout_constraintTop_toTopOf="@id/ca_seven" />
+
+    <Button
+        android:id="@+id/ca_mult"
+        style="@style/OperationButton"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="@id/ca_seven"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ca_point"
+        app:layout_constraintTop_toTopOf="@id/ca_seven" />
+
+
+    <Button
+        android:id="@+id/ca_four"
+        style="@style/CalculatorButton"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@id/ca_one"
+        app:layout_constraintEnd_toStartOf="@id/ca_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ca_seven" />
+
+    <Button
+        android:id="@+id/ca_five"
+        style="@style/CalculatorButton"
+        android:text="5"
+        app:layout_constraintBottom_toBottomOf="@id/ca_four"
+        app:layout_constraintEnd_toStartOf="@id/ca_six"
+        app:layout_constraintStart_toEndOf="@id/ca_four"
+        app:layout_constraintTop_toTopOf="@id/ca_four" />
+
+    <Button
+        android:id="@+id/ca_six"
+        style="@style/CalculatorButton"
+        android:text="6"
+        app:layout_constraintBottom_toBottomOf="@id/ca_four"
+        app:layout_constraintEnd_toStartOf="@id/ca_minus"
+        app:layout_constraintStart_toEndOf="@id/ca_five"
+        app:layout_constraintTop_toTopOf="@id/ca_four" />
+
+    <Button
+        android:id="@+id/ca_minus"
+        style="@style/OperationButton"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@id/ca_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ca_six"
+        app:layout_constraintTop_toTopOf="@id/ca_four" />
+
+
+    <Button
+        android:id="@+id/ca_one"
+        style="@style/CalculatorButton"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@id/ca_back"
+        app:layout_constraintEnd_toStartOf="@id/ca_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ca_four" />
+
+    <Button
+        android:id="@+id/ca_two"
+        style="@style/CalculatorButton"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@id/ca_one"
+        app:layout_constraintEnd_toStartOf="@id/ca_three"
+        app:layout_constraintStart_toEndOf="@id/ca_one"
+        app:layout_constraintTop_toTopOf="@id/ca_one" />
+
+    <Button
+        android:id="@+id/ca_three"
+        style="@style/CalculatorButton"
+        android:text="3"
+        app:layout_constraintBottom_toBottomOf="@id/ca_one"
+        app:layout_constraintEnd_toStartOf="@id/ca_plus"
+        app:layout_constraintStart_toEndOf="@id/ca_two"
+        app:layout_constraintTop_toTopOf="@id/ca_one" />
+
+    <Button
+        android:id="@+id/ca_plus"
+        style="@style/OperationButton"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@id/ca_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ca_three"
+        app:layout_constraintTop_toTopOf="@id/ca_one" />
+
+
+    <Button
+        android:id="@+id/ca_back"
+        style="@style/CalculatorButton"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ca_zero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ca_one" />
+
+    <Button
+        android:id="@+id/ca_zero"
+        style="@style/CalculatorButton"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@id/ca_back"
+        app:layout_constraintEnd_toStartOf="@id/ca_point"
+        app:layout_constraintStart_toEndOf="@id/ca_back"
+        app:layout_constraintTop_toTopOf="@id/ca_back" />
+
+    <Button
+        android:id="@+id/ca_point"
+        style="@style/CalculatorButton"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="@id/ca_back"
+        app:layout_constraintEnd_toStartOf="@id/ca_result"
+        app:layout_constraintStart_toEndOf="@id/ca_zero"
+        app:layout_constraintTop_toTopOf="@id/ca_back" />
+
+    <Button
+        android:id="@+id/ca_result"
+        style="@style/ResultButton"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="@id/ca_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ca_point"
+        app:layout_constraintTop_toTopOf="@id/ca_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

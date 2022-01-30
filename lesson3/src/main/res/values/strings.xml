@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lesson3</string>
+    <string name="title">Title</string>
+    <string name="subtitle">Subtitle</string>
+    <string name="back">Back</string>
+    <string name="clean">AC</string>
+</resources>
