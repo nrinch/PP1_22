@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">lesson5</string>
+    <string name="count_of_entry">Count of entry %d</string>
+</resources>
