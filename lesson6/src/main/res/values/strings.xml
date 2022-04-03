@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lesson6</string>
+    <string name="update">Update</string>
+    <string name="insert">Insert</string>
+    <string name="to_screen_with_database">To screen with Database</string>
+    <string name="to_screen_with_remote_data">To screen with Remote Data</string>
+</resources>

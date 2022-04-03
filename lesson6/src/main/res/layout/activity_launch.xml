@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="@dimen/dp64"
+    tools:context=".presentation.screen.launch.LaunchActivity">
+
+    <Button
+        android:id="@+id/al_database"
+        android:text="@string/to_screen_with_database"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp64"/>
+    <Button
+        android:id="@+id/al_remote"
+        android:text="@string/to_screen_with_remote_data"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp64"/>
+
+</LinearLayout>
